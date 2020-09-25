@@ -1,8 +1,8 @@
-class ArticlesController < ApplicationController
-    def new
-    end
-   
+class ArticlesController < ApplicationController 
     def create
-        render plain: params[:article].inspect
-    end
+        @article = Article.new(params[:article])
+       
+        @article.save
+        redirect_to @article
+      end
   end
