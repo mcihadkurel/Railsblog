@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :articles
  
   root 'welcome#index'
+  #This route directing url
 end
