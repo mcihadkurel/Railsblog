@@ -1,4 +1,4 @@
 class ApplicationController < ActionController::Base
-  def new
+  def initialize
   end
 end
