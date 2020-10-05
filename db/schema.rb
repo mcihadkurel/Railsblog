@@ -35,5 +35,11 @@ ActiveRecord::Schema.define(version: 2020_09_29_092432) do
     t.index ['article_id'], name: 'index_taggings_on_article_id'
     t.index ['tag_id'], name: 'index_taggings_on_tag_id'
   end
+  
+  create_table 'tags', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
 
 end
